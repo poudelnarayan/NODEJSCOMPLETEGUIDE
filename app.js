@@ -1,5 +1,3 @@
-const http = require("http");
-
 const express = require("express");
 
 const app = express();
@@ -15,6 +13,4 @@ app.use((req, res, next) => {
   res.send("<h1>Hello from express!!</h1>"); //send method provided by express.js attaches all the headers and requires things
 });
 
-const server = http.createServer(app);
-
-server.listen(3000);
+app.listen(3000);
