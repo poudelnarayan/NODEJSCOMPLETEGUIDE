@@ -40,7 +40,5 @@ function requestHandler(req, res) {
   res.end();
 }
 
-module.exports = {
-  handler: requestHandler,
-  someText: "Some HardCoded Text",
-};
+module.exports.handler = requestHandler;
+module.exports.someText = "Some Hard Coded Text";
