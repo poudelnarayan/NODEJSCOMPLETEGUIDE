@@ -41,4 +41,3 @@ function requestHandler(req, res) {
 }
 
 module.exports.handler = requestHandler;
-module.exports.someText = "Some Hard Coded Text";
