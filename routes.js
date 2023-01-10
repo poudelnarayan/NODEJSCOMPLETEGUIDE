@@ -39,4 +39,8 @@ function requestHandler(req, res) {
   res.write("</html>");
   res.end();
 }
-module.exports = requestHandler;
+
+module.exports = {
+  handler: requestHandler,
+  someText: "Some HardCoded Text",
+};
