@@ -6,7 +6,14 @@ const expressHbs = require("express-handlebars");
 
 const app = express();
 
-app.engine("hbs", expressHbs()); // we didnt do this in pug because that was a built in template engine
+app.engine(
+  "hbs",
+  expressHbs({
+    layoutsDir: "views/layouts/",
+    defaultLayout: "main-layout",
+    extname: "hbs",
+  })
+);
 
 app.set("view engine", "hbs");
 app.set("views", "views");
