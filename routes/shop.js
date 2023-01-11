@@ -9,8 +9,9 @@ const adminData = require("./admin");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  console.log(adminData.products);
-  res.render("shop"); // this render method is provided by expressjs and it will use the default templating engine which is why we had to define the view engine in app.js
+  const products = adminData.products;
+  // the render method somplu allows to pass in data that should be added into our view
+  res.render("shop", { prods: products, docTitle: "Shop" });
 });
 
 module.exports = router;
