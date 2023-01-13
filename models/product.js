@@ -21,6 +21,7 @@ module.exports = class Product {
   }
 
   save() {
+    this.id = Math.random().toString();
     getProductsFromFile((products) => {
       products.push(this); // to use 'this' we must use arrow function otherwise 'this' will loose its context
       fs.writeFile(p, JSON.stringify(products), (err) => {
